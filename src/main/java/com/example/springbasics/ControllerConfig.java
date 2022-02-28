@@ -12,22 +12,26 @@ import org.springframework.web.servlet.DispatcherServlet;
 
 import com.example.springbasics.config.WebConfig;
 
-public class ControllerConfig implements WebApplicationInitializer {
-	@Override
-	public void onStartup(ServletContext sc) throws ServletException {
-		AnnotationConfigWebApplicationContext root = new AnnotationConfigWebApplicationContext();
-		root.register(WebConfig.class);
-
-		root.refresh();
-		root.setServletContext(sc);
-
-		sc.addListener(new ContextLoaderListener(root));
-
-		DispatcherServlet dv = new DispatcherServlet(new GenericWebApplicationContext());
-
-		ServletRegistration.Dynamic appServlet = sc.addServlet("welcome", dv);
-		appServlet.setLoadOnStartup(1);
-		//appServlet.addMapping("/test/*");
-		appServlet.addMapping("/welcome");
-	}
+public class ControllerConfig {
+	
 }
+
+//public class ControllerConfig implements WebApplicationInitializer {
+//	@Override
+//	public void onStartup(ServletContext sc) throws ServletException {
+//		AnnotationConfigWebApplicationContext root = new AnnotationConfigWebApplicationContext();
+//		root.register(WebConfig.class);
+//
+//		root.refresh();
+//		root.setServletContext(sc);
+//
+//		sc.addListener(new ContextLoaderListener(root));
+//
+//		DispatcherServlet dv = new DispatcherServlet(new GenericWebApplicationContext());
+//
+//		ServletRegistration.Dynamic appServlet = sc.addServlet("welcome", dv);
+//		appServlet.setLoadOnStartup(1);
+//		//appServlet.addMapping("/test/*");
+//		appServlet.addMapping("/welcome");
+//	}
+//}
