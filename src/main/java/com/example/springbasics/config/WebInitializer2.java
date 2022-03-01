@@ -7,7 +7,7 @@ import org.springframework.web.servlet.FrameworkServlet;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 @Configuration
-public class MyWebInitializer /* extends AbstractAnnotationConfigDispatcherServletInitializer */ {
+public class WebInitializer2 {
 
 //	@Override
 //	protected Class<?>[] getRootConfigClasses() {
