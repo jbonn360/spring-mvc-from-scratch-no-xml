@@ -8,7 +8,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class WelcomeController {
 	//Project files from: https://www.baeldung.com/spring-controllers
-	////
 	
 	@GetMapping
 	@RequestMapping(value = "/welcome")
